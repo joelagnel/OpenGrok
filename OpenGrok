@@ -245,7 +245,7 @@ DefaultInstanceConfiguration()
     #JAVA_DEBUG="$JAVA_DEBUG,server=y,address=8010,suspend=y"
 
     # OPTIONAL: Ignore these patterns as names of files or directories
-    #IGNORE_PATTERNS="-i dummy"
+    IGNORE_PATTERNS="-i d:out"
     # To ignore skipping just the history cache creation for a particular
     # directory and all of it's subdirectories, touch an empty
     # .opengrok_skip_history file at the root of that directory
@@ -316,7 +316,7 @@ DefaultInstanceConfiguration()
     fi
 
     # OPTIONAL: JVM Options
-    JAVA_OPTS="${JAVA_OPTS:--Xmx2048m}"
+    JAVA_OPTS="${JAVA_OPTS:--Xmx4096m}"
     
     # OPTIONAL: Full Path to History Utilities
     HG="`Which hg`"
